@@ -93,7 +93,6 @@ describe("paths",function(){
 		g.addEdge('D','E');
 
 		var path=g.pathBetween('A','E')
-
 		assert.equal(4,path.length);
 		assert.deepEqual(['A','B','D','E'],path);
 	});
@@ -167,7 +166,6 @@ describe("paths",function(){
 		g.addEdge('B','C');
 		g.addEdge('C','F');
 		g.addEdge('F','G');
-
 		assert.equal('G',g.farthestVertex('A'));
 		assert.equal('G',g.farthestVertex('E'));
 	});

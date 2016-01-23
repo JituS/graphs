@@ -43,7 +43,6 @@ describe("quantities",function(){
 		g.addVertex('C');
 		g.addEdge('A','B');
 		g.addEdge('B','C');
-
 		assert.equal(2,g.size());
 	});
 	it("should provide the size of a graph with no edges",function(){
@@ -64,13 +63,13 @@ describe("paths",function(){
 		g.addVertex('C');
 		g.addVertex('D');
 		g.addVertex('E');
+		g.addVertex('F');
+		g.addVertex('G');
 	});
 
 	it("should determine a path between two adjacent vertices",function(){
 		g.addEdge('A','B');
-
 		var path=g.pathBetween('A','B')
-
 		assert.deepEqual(['A','B'],path);
 	});
 
@@ -78,7 +77,6 @@ describe("paths",function(){
 		g.addEdge('A','B');
 		g.addEdge('B','C');
 		var path=g.pathBetween('A','C')
-
 		assert.deepEqual(['A','B','C'],path);
 	});
 
@@ -88,7 +86,6 @@ describe("paths",function(){
 		g.addEdge('B','C');
 		g.addEdge('B','D');
 		g.addEdge('D','E');
-
 		var path=g.pathBetween('A','E')
 
 		assert.equal(4,path.length);
